@@ -9,7 +9,7 @@ const startGame = () => {
 
 const spawnHero = () => {
   const hero = document.createElement("img");
-  const initialPos = [500, 70];
+  const initialPos = [100, 70];
   hero.className = "hero";
   hero.src = "img/hero.gif";
   hero.style.right = initialPos[0] + "px";
@@ -32,27 +32,34 @@ const moveHero = (hero) => {
         actualPosition += 10;
         hero.style.right = actualPosition + "px";
       }
-    }
-    if (e.key === "ArrowRight") {
+    } else if (e.key === "ArrowRight") {
       let actualPosition = parseInt(hero.style.right);
       if (actualPosition > 90) {
         actualPosition -= 10;
         hero.style.right = actualPosition + "px";
       }
-    }
-    if (e.key === "ArrowUp") {
+    } else if (e.key === "ArrowUp") {
       let actualPosition = parseInt(hero.style.bottom);
       if (actualPosition < 800) {
         actualPosition += 10;
         hero.style.bottom = actualPosition + "px";
       }
-    }
-    if (e.key === "ArrowDown") {
+    } else if (e.key === "ArrowDown") {
       let actualPosition = parseInt(hero.style.bottom);
       if (actualPosition > 60) {
         actualPosition -= 10;
         hero.style.bottom = actualPosition + "px";
       }
+    } else if (e.code === "Space") {
+      let x = parseInt(hero.style.right);
+      let y = parseInt(hero.style.bottom);
+      let currentPosition = [x, y];
+      console.log(currentPosition);
+      let projectile = document.createElement("div");
+      projectile.classList.add("projectile");
+      projectile.style.right = currentPosition[0] + 48 + "px";
+      projectile.style.bottom = currentPosition[1] + 94 + "px";
+      gameZone.appendChild(projectile);
     }
   });
 };

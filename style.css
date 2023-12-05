@@ -53,3 +53,13 @@ button {
   background-repeat: no-repeat;
   transform: rotate(90deg);
 }
+
+.projectile {
+  height: 11px;
+  width: 5px;
+  position: absolute;
+  background-image: url("img/bullet.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
