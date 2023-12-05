@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+  color: green;
+}
+button {
+  position: absolute;
+  right: 47%;
+  top: 45%;
+  padding: 1rem 0;
+  width: 100px;
+  background-color: white;
+  font-weight: bold;
+  box-shadow: 1px 4px 1px black;
+}
+
+.game-zone {
+  width: 900px;
+  height: 90vh;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.game-zone img {
+  background-size: contain;
+  width: 900px;
+  height: 100%;
+}
+
+.game-zone .hero {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.game-zone .enemy {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 70px;
+  right: 450px;
+  background: url("img/enemy.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
